@@ -21,7 +21,7 @@ CLASS zcl_sql_03_fjcm IMPLEMENTATION.
 
 * CASE 2  *Codigo mejorado
 
-*    DELETE FROM zcarrier_fjcm.  "Elminar todos los registros *Peligroso
+    DELETE FROM zcarrier_fjcm.  "Elminar todos los registros *Peligroso
 
     SELECT FROM /DMO/I_Carrier
            FIELDS AirlineID AS carrier_id,  " Poner alias para mapearlo y asginar campos
@@ -35,8 +35,8 @@ CLASS zcl_sql_03_fjcm IMPLEMENTATION.
       TRY.
           INSERT zcarrier_fjcm FROM TABLE @lt_ddbb.    "Ingresar multiples desde una consulta previamente hecha
 
-        CATCH cx_sy_open_sql_db INTO DATA(lx_sql_db).
-          out->write( |The records was not recorded| ).
+        CATCH cx_sy_open_sql_db INTO DATA(lx_sql_db). "Capturr nombre del error
+          out->write( |The records was not recorded| ). "Aca pongo mensaje de lo que quiero que salga cuando capture mi error
           return.
       ENDTRY.
 

@@ -21,7 +21,7 @@ CLASS zcl_sql_04_fjcm IMPLEMENTATION.
 
 * CASE 2  *Codigo mejorado
 
-*    DELETE FROM zcarrier_fjcm.  "Elminar todos los registros *Peligroso
+    DELETE FROM zcarrier_fjcm.  "Elminar todos los registros *Peligroso
 
     SELECT FROM /DMO/I_Carrier
            FIELDS AirlineID AS carrier_id,  " Poner alias para mapearlo y asginar campos
