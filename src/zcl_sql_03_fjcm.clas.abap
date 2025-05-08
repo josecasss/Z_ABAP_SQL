@@ -27,7 +27,7 @@ CLASS zcl_sql_03_fjcm IMPLEMENTATION.
            FIELDS AirlineID AS carrier_id,  " Poner alias para mapearlo y asginar campos
                   Name,
                   CurrencyCode AS currency_code
-           WHERE CurrencyCode = 'USD'
+*           WHERE CurrencyCode = 'USD'
            INTO  CORRESPONDING FIELDS OF TABLE @lt_ddbb. "INTO CORRESPONDING FIELDS OF TABLE *importante*
 
     IF sy-subrc = 0.
