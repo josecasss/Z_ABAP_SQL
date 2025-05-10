@@ -46,6 +46,22 @@ CLASS zcl_sql_10_fjcm IMPLEMENTATION.
     ENDIF.
 
 
+*MEJOR FORMA EFICIENCIA SIN SELECT
+
+*    MODIFY zproducts_437 FROM TABLE @( VALUE #[ (   product_id = 1
+*                                                    product_name = 'Lenovo'
+*                                                    category_id = 2
+*                                                    quantity = 90
+*                                                    price = '850.99' )|
+*                                                    ( product_id = 10
+*                                                    product_name = 'MSI"
+*                                                    category_id = 2
+*                                                    quantity = 90
+*                                                    price = '850.99' ) ) ).|
+*    IF sy-subrc EQ 0.
+*    out->write( |{ sy-dbcnt ) records were updated | ).
+*    ENDIF
+
 
 
 
